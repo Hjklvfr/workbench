@@ -1,0 +1,23 @@
+[project]
+name = "analytics"
+version = "0.1.0"
+description = ""
+requires-python = ">=3.12.9"
+dependencies = [
+    "kagglehub>=0.3.13",
+    "datasets>=4.0.0",
+    "mlflow>=3.1.4",
+    "boto3>=1.40.25",
+    "huggingface-hub[hf-xet]>=0.34.4",
+    "python-dotenv>=1.1.1",
+    "scikit-learn>=1.6.1",
+    "scipy>=1.13.1",
+    "seaborn>=0.13.2",
+    "pandas>=2.3.2",
+    "mk1",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "notebook>=7.4.5",
+]
