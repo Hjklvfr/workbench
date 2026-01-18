@@ -4,15 +4,23 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12.9"
-dependencies = []
+dependencies = [
+    "boto3>=1.40.28",
+    "mlflow>=3.3.2",
+    "python-dotenv>=1.1.1",
+]
 
 [tool.uv.sources]
 mk1 = { workspace = true }
+script-classification = { workspace = true }
+mdata = { workspace = true }
 analytics = { workspace = true }
 
 [tool.uv.workspace]
 members = [
-    "models/*", "analytics",
+    "models/*",
+    "analytics",
+    "mdata",
 ]
 
 [tool.uv]
@@ -21,7 +29,9 @@ dev-dependencies = [
     "ipykernel>=6.30.1",
     "pytest>=8.4.2",
     "pip>=25.2",
-    "mk1"
+    "mk1",
+    "script-classification",
+    "mdata"
 ]
 package = false
 
